@@ -42,3 +42,12 @@ const book3 = new Book("The Great Gatsby", "F. Scott Fitzgerald", 1925);
 console.log(book1.isClassic()); // Output: 63
 console.log(book2.isClassic());
 console.log(book3.isClassic()); // Output: 98
+
+
+
+-------------------------------------------------***********************************---------------------------------------------------------------
+
+/**In a JavaScript game, you have a basePlayer object that contains common properties and methods for all players. You want to create a heroPlayer object that inherits from basePlayer as its prototype but also has its own unique properties. How should you create this heroPlayer object? */
+let hero = Object.create(basePlayer);
+
+//Object.create() is used to create a new object with proto as its prototype. This allows hero to inherit basePlayer properties, and have its own unique ones.
