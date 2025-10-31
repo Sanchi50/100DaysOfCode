@@ -43,3 +43,28 @@ getWheels() → Child class ka apna method hai jisme hum parent ke property (whe
 
 Yahaan this.wheels likhne se parent ki property mil jaati hai
 (kyunki Car ne Vehicle se inherit kiya hai). */
+
+
+
+
+
+
+
+
+class Animal{
+    constructor(){
+        console.log("Animal constructor Executed");
+    }
+}
+
+class Dog extends Animal{
+    constructor(){
+        super();
+        console.log("Dog constructor executed");
+    }
+
+}
+const myDog = new Dog();
+
+//The superclass constructor is executed before the subclass constructor.
+//The constructor function of the parent class is executed first then the constructor function of the subclass is executed.
