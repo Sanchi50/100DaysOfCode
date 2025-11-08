@@ -1,7 +1,7 @@
 1.//Select the heading of a page by ID and change its text to You Can Do It!.
 let idh1 = document.getElementById("youCan");
 idh1.textContent = "You Can Do It";
-console.log(idh1)
+console.log(idh1);
 
 
 
@@ -60,7 +60,7 @@ aLink.setAttribute("href", "https://classroom.codingninjas.com/app/classroom/me/
 //ek aur tarika hai
 aLink.href = "https://classroom.codingninjas.com/app/classroom/me/36809/content/995594/offering/17464784";
 
-//add a title attribute to a div dynamically
+8.//add a title attribute to a div dynamically
 let div = document.querySelector("div");
 div.setAttribute("title", "some info");
 console.log(div);
@@ -68,6 +68,43 @@ console.log(div);
 div.title = "some other info";
 
 
-//Remove the disabled attribute from button
+9.//Remove the disabled attribute from button
 let btn = document.querySelector("button");
 btn.removeAttribute("disabled");
+
+10.//create a new list item <li>New Task</li> and add it to the end of a ul.
+//step1: find the element jaha par put karna hai
+let ul = document.querySelector("ul");
+//step2: create that li
+let li = document.createElement("li");
+li.textContent = "New Task";
+ul.appendChild(li);
+
+
+11.//Create a new img element with a placeholder source and add it to the top of a div.
+let img1 = document.createElement("img");
+img.setAttribute("src" ,
+   "https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE=");
+
+ document.querySelector("div").prepend(img);
+ img.classList.add("placeholder");
+
+ 12.//select the first item from the list and delete it from the dom.
+  document.querySelector("li").remove(li);
+  //second list se bhi hatao
+  document.querySelector("#list2 li").remove();
+
+  /**<button onclick="removeMango()">Remove Mango</button>
+
+<script>
+function removeMango() {
+  document.querySelector("#list2 li").remove();
+}
+</script>
+ */
+
+
+
+
+  
+
