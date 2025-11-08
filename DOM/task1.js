@@ -58,4 +58,16 @@ document.querySelector("img").setAttribute("src", "https://www.shutterstock.com/
 let aLink = document.querySelector("a")
 aLink.setAttribute("href", "https://classroom.codingninjas.com/app/classroom/me/36809/content/995594/offering/17464784");
 //ek aur tarika hai
-aLink.href = "https://classroom.codingninjas.com/app/classroom/me/36809/content/995594/offering/17464784"
+aLink.href = "https://classroom.codingninjas.com/app/classroom/me/36809/content/995594/offering/17464784";
+
+//add a title attribute to a div dynamically
+let div = document.querySelector("div");
+div.setAttribute("title", "some info");
+console.log(div);
+//or issey aise bhi kar sakte hai
+div.title = "some other info";
+
+
+//Remove the disabled attribute from button
+let btn = document.querySelector("button");
+btn.removeAttribute("disabled");
