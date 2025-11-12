@@ -234,4 +234,9 @@ input ?? console.log("No value") ||
 (input === "" ? console.log("Empty string") : console.log("Has value"));
 
 
+let str1 = "JOHN";
+let str2 = "DOE";
+let answer = str1.concat(str2).toLowerCase()
+console.log(answer);
+
 
