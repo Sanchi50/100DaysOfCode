@@ -159,8 +159,91 @@ array.sort(function(a, b){
 });
 console.log(array);
 
+//Destructuring Array
+const arr = [1,2,3,[4,5,6]];
+const a1 = arr[0];
+
+//Create an array with 3 fruits and print 2nd fruit add guava at the end and pineapple at the
+//starting of this array
+let fr = ["mango", "banana", "oranges"];
+let f2 = fr[1];
+console.log(f2);
+fr.push("guava");
+fr.unshift("pineapple");
+
+//replace banana with kiwi
+let fr = ["mango", "banana", "oranges"];
+fr.splice(1,1,"kiwi");
+
+//remove the last element from this array using a method
+let num = [1,2,3,4,5,6,7];
+num.pop();
+
+//Extract only the middle 3 elements from this array.
+let num = [1,2,3,4,5,6,7,];
+num.splice(2,3);
+
+//add red and blue at index 1 in this array
+//yaha splice ko bataya ke hatana nahi hai kuch 1 ke baad agar value rakh do to vo add kar deta hai vo values.
+//1 = konsa index se hatanahai
+// 0 = means kuch bhi nahi hatana
+//red blue mean inhe add kar do 1st index pe.
+let colors = ["Green", "Yellow"];
+colors.splice(1,0,"Red", "Blue");
+console.log(colors);
+
+//sort this array alphabetically and reverse it
+let names = ["Zara", "Evirose", "Nefsfinds", "H&M", "Zudio"]
+names.sort().reverse();
+
+//use .map to square each number
+let arr = [1,2,3,4]
+let square = arr.map(function(sq){
+    return sq*sq;
+});
 
 
+//use .filter to keep the number that is greater than 10.
+let arr = [5,12,8,20,3];
+arr.filter(function(val){
+    return val>10;
+});
 
+//use .find() to get 1st num which is less than 10
+let arr = [15,20,25,8,3,45];
+let f = arr.find(function(ugh){
+return ugh<10
+});
+
+
+//use .some() to check if any student has scored below 35:
+let score = [45,60,67,90,97,28,78,56,89];
+let s = score.some(function(val){
+    return val<35;
+});
+
+//use .every() to check if all values are even
+let val = [2,4,6,8,10];
+let eve = val.every(function(ch){
+    return ch % 2 === 0;
+});
+
+//destructure this array to get the firstname and lastname
+let fullname = ["Sanchi", "Wahane"];
+let [firstname,lastname] = fullname;
+
+//Merge two arrays using spread operators
+let a = [1,2];
+let b = [3,4];
+let c =[...a,...b];
+console.log(c);
+
+//add India to the start of the array using spread
+let countries = ["U.K.", "U.S"]
+countries = ["India",...countries];
+
+//clone this array properly (not by reference)
+let arr = [1,2,3,4,5];
+let newArr = [...arr];
 
 
