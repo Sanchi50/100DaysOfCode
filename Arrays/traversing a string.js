@@ -12,3 +12,9 @@ function countChars(str, ch){
 }
 
 countChars(str, charToFind);
+
+
+//find words now
+let words = str.split(" ");
+let count = words.length;
+console.log(count);
