@@ -48,3 +48,68 @@ function main() {
     adjustTotalOfYear
   };
 }
+
+
+//IIFE
+(function (a,b){
+    console.log(a**b);
+
+}) (4,6);
+
+const user = (function () {
+     const userData = {
+        userName : "John",
+        userAge : 20,
+    }
+
+    function  getName () {
+        console.log(userData.userName);
+
+    }
+    function updateAge(age){
+        console.log(userData.userAge + age);
+
+    }
+    return {getName, updateAge};
+})();
+console.log(user);
+
+//example2
+function main(){
+    return (function (){
+        console.log("Hello user")
+    }) ();
+}
+const result = main();
+//we cant store the IIFE and call it later like the other functions.
+
+
+//example3
+var x = 10;
+(function (){
+    console.log(x);
+})();
+//10
+//although we cant access the variables declared inside IIFE , but IIFE has scope to the outer scope
+//and can access the variables declared in the outer scope.
+
+
+//example4
+var counter = (function(){
+    var count = 0;
+    return {
+        increment : function (){
+            count++;
+        },
+        getCount: function(){
+            return count;
+        },
+    };
+})();
+
+counter.increment();
+counter.increment();
+console.log(counter.getCount());
+//2
+
+
