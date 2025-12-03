@@ -79,11 +79,7 @@ function square(n) {
   return n * n;
 }
 
-const func = main();
+const funct = main();
 
-console.log(func([2,3,4], square))
+console.log(funct([2,3,4], square))
 
-
-
-
- 
