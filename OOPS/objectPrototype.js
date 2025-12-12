@@ -39,3 +39,14 @@ const book3 = new Book("The Great Gatsby", "F. Scott Fitzgerald", 1925);
 // Consoling output
 console.log(book1.isClassic()); // Output: 63
 console.log(book3.isClassic()); // Output: 98
+
+
+
+
+let parent = { name: "parent", children: [] };
+
+let child1 = Object.create(parent);
+child1.name = "child1";
+
+child1.children.push(child1.name);
+

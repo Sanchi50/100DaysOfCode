@@ -14,6 +14,10 @@ const users = [
 const names = users.map(u => u.name);
 
 console.log(names); // ["Ayaan", "Reva"]
+//u = { name: "Sanchi", age: 20 }
+//u.name = "Sanchi"
+//bcoz objects use dot notation
+
 
 
 //example3
@@ -105,5 +109,107 @@ price + price * 0.18
 
 
 
+
+ //Convert an array of strings to uppercase using map().
+ const words = ["cat", "dog", "rat"];
+let toUpper = words.map(str => str.toUpperCase());
+console.log(toUpper)
+
+
+
+//Har number ko double karke new array banao
+let num = [20, 40, 70, 100];
+let doubledd = num.map(n => n * 2)
+
+//add 5 to each element in an array
+let num = [15, 25, 40, 55];
+let add = num.map(n => n+ 5)
+
+//square of every num
+let num = [100, 400, 1225, 2500]
+let sq = num.map(n => n*n)
+console.log(sq)
+
+//convert to string
+let str = [10, 20, 35, 50];
+let toStr = str.map(n => n.toString());
+console.log(toStr)
+
+//Har number ko true/false me convert karo:
+//True agar number 30 se bada ho.
+let num = [10,89,847,845,21,2,12,34,12,]
+let bool = num.map(n => n > 30 );
+console.log(bool)
+
+/**Numbers ko USD conversion jaise convert karo:
+num / 83
+Output: approx USD values. */
+let num = [780];
+let usd = num.map(n => n/83)
+console.log(usd)
+/**1 USD ≈ 83 INR
+So:
+780 INR / 83 ≈ 9.39 USD
+ */
+
+
+/**Har number ko {value: num} object me convert karo.
+Output:
+[{value:10}, {value:20}, {value:35}, {value:50}] */
+let num = [10,89,847,845,21,2,12,34,12,]
+let val = num.map(n => ({value:n}))
+console.log(val)
+/**return nahi likha qk implicit return in arrow fn.
+ * Why parentheses are needed for objects
+If you write this:
+n => { value: n }
+JS thinks { value: n } is a function block, not an object.
+So we wrap it like this:
+n => ({ value: n })
+Now JS knows it’s an object being returned, not a block */
+
+//Har number ko "Item - <number>" format me convert karo.
+//Output: ["Item - 10", "Item - 20", ...]
+let num = [10,20,30,40,50];
+let out = num.map(n => (`Item - ${n}`))
+console.log(out)
+
+/**Har number ke basis par priority tag banao:
+If number < 25 → "low"
+if between 25–40 → "medium"
+else "high"
+Output example: ["low", "low", "medium", "high"] */
+let num = [1,23,5,34,23,32,658,23,34,232,21,231,12];
+
+let pr = num.map(n => 
+  n < 25 
+    ? "low" 
+    : n >= 25 && n <= 40 
+        ? "medium" 
+        : "high"
+);
+
+console.log(pr);
+
+//or hum aise bhi kar sakte hai
+let pr = num.map(n => {
+  if (n < 25) return "low";
+  if (n <= 40) return "medium";
+  return "high";
+});
+
+
+
+//return {original:value , doubled:value}
+ let nuum = [10,20,30,40,50];
+
+ let value = nuum.map(n => {
+  return {original: n,
+        doubled: n * 2;
+ };
+ })
+
+ //second way to do it
+ let value = num.map(n => ({ original: n, doubled: n * 2 }));
 
 
