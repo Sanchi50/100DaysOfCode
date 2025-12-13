@@ -212,4 +212,51 @@ let pr = num.map(n => {
  //second way to do it
  let value = num.map(n => ({ original: n, doubled: n * 2 }));
 
+ //11. Har number ko convert karo:
+//If even → {num, type:"even"}
+//If odd → {num, type:"odd"}
+let num = [1, 23, 5, 34, 23, 32, 658, 23, 34, 232, 21, 231, 12];
+let result = num.map(n => ({
+  num: n,
+  type: n%2 === 0? "even" : "odd"
+}));
 
+/*12. Har number ko percentage me convert karo:
+num / total * 100
+(Pehle total = 10+20+35+50)
+Output: percentages.*/
+let num = [10,20,35,50]
+let num = [10,20,35,50]
+let reduce = num.reduce((acc, curr) => acc + curr, 0);
+console.log(reduce)
+let map = num.map(n => (n/reduce) * 100);
+let result = map
+console.log(result)
+
+//or we want rounded percentage
+let result = num.map(n => ((n / total) * 100).toFixed(2));
+
+// Har number ko index ke saath merge karke banao:
+//{index, value, multiplied: value * index}
+
+//create new object from old 
+//question: add new property isEligible:true if age is greater than 18 
+//else isEligible: false
+
+let arr = [{name:"fgd", age:67},{name:"wegfhe", age:78}]
+let result = arr.map(n => {
+    if(n.age > 18) return {...n, isEligible:true}
+    else{
+        return {...n,isEligible:false}
+    }
+})
+console.log(result)
+
+//  let obj = {name:"fgd", age:67}
+//  console.log({...obj,hobby: "coding", bf:"chidpokla"})
+
+
+//we want to add 1 to each element of nested array
+let array = [[1,2],[3,4]]
+let update = array.map(n => n.map(e=>e+1) )
+console.log(update)
