@@ -43,6 +43,24 @@ console.log(book3.isClassic()); // Output: 98
 
 
 
+
+
+
+
+
+
+function Person(name) {
+  this.name = name;
+}
+
+Person.prototype.age = 30;
+
+const john = new Person("John");
+john.__proto__.age = 40;
+
+console.log(john.age);
+console.log(Person.prototype.age);
+
 let parent = { name: "parent", children: [] };
 
 let child1 = Object.create(parent);
@@ -50,3 +68,45 @@ child1.name = "child1";
 
 child1.children.push(child1.name);
 
+
+
+
+//prototype
+function Game(name, platform) {
+  this.name = name;
+  this.platform = platform;
+}
+
+const fifa = new Game("FIFA 23", "PlayStation");
+
+console.log(fifa.__proto__ === Game.prototype);
+console.log(fifa.__proto__.__proto__ === Object.prototype);
+//true true
+
+
+
+//que
+function Galaxy(name) {
+  this.name = name;
+}
+
+const milkyWay = new Galaxy("Milky Way");
+console.log(milkyWay.__proto__.__proto__.__proto__);
+//null
+
+
+
+
+
+
+function Person(name) {
+  this.name = name;
+}
+
+Person.prototype.age = 30;
+
+const john = new Person("John");
+john.__proto__.age = 40;
+
+console.log(john.age);
+console.log(Person.prototype.age);
