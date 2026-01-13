@@ -39,9 +39,9 @@ try {
 //The second parameter of JSON.stringify() can be used as a replacer to filter which properties should be included in the resulting JSON string.
 JSON.stringify(value, replacer)
 /Replacer in JSON.stringify()
-let obj = { name: "Sam", age: 20, city: "Pune" };
+let obj2 = { name: "Sam", age: 20, city: "Pune" };
 
-JSON.stringify(obj, ["name", "age"]);
+JSON.stringify(obj2, ["name", "age"]);
 // '{"name":"Sam","age":20}'
 
 
@@ -63,10 +63,20 @@ JSON.stringify(user, ["name", "role"]);
 //Lets you modify values while parsing.
 let json = '{"age":20}';
 
-let obj = JSON.parse(json, (key, value) => {
+let obj1 = JSON.parse(json, (key, value) => {
   if (key === "age") return value + 1;
   return value;
 });
 
-console.log(obj.age); // 21
+console.log(obj1.age); // 21
 
+const jsonStr = '{"name":"John","age":30,"city":"New York"}';
+
+// Method to be used
+const obj = JSON.parse(jsonStr);
+
+console.log(obj.name); // John
+console.log(obj.age);  // 30
+console.log(obj.city); // New York
+//JSON.parse() converts JSON string → JavaScript object
+//Then you can access properties using dot notation
