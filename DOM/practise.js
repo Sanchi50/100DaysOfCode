@@ -61,3 +61,9 @@
   p.forEach(function(elem) {
    elem.style.fontSize = "28px";
   });
+
+  //eventListener
+  btn.addEventListener("click" , function(){
+    p.style.color ="red";
+  })
+  

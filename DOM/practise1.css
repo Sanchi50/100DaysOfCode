@@ -1,0 +1,19 @@
+.green {
+  color: green;
+}
+/*Iska matlab:
+Jab kisi element pe green class lagegi → wo green ho jaayega.*/
+
+.hide{
+  display: none;
+}
+
+.dark{
+  background-color: black;
+  color: white;
+}
+
+.active {
+  background-color: blue;
+  color: white;
+}
