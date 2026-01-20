@@ -8,12 +8,13 @@ const questionObj =
         "How many pieces of bun are in a Mcdonald's Big Mac?",
     };
 
-
+//phele destructurin kar lete hai:
     const {
       correctAnswer, options, question
     } = questionObj;
     const questionEl = document.getElementById("question");
-    questionEl.textContent = question;
+    
 
     const optionsEl = document.getElementById("options");
     const scoreEl = document.getElementById("score");
+    questionEl.textContent = question;

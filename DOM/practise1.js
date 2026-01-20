@@ -50,3 +50,30 @@ let mv = document.querySelector(".mv");
 mv.addEventListener("mouseover", ()=>{
     mv.style.color = "red";
 })
+
+let input = document.getElementById("input");
+input.addEventListener("input", function(e){
+    //backspace karo to null print hota hai
+    //humein null print nahi karana, toh humne kiya agar data is not equal to null to
+    //  sab print kar do.
+    if(e.data !== null){
+    console.log(e.data);
+}
+
+});
+
+
+let sel = document.querySelector("select");
+sel.addEventListener("change", function(e){
+    console.log(e.target.value);
+
+});
+
+
+//selected pe eventListener laga ke device ka text change kar rahe hai.
+//value likhna zaruri hai html me
+let sel1 = document.querySelector("selected");
+let device = document.querySelector("#device");
+sel.addEventListener("change", function(e){
+    device.textContent = `${e.target.value} Device Selected`;
+});
