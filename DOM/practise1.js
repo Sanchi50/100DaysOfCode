@@ -77,3 +77,6 @@ let device = document.querySelector("#device");
 sel.addEventListener("change", function(e){
     device.textContent = `${e.target.value} Device Selected`;
 });
+
+
+

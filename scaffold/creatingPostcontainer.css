@@ -4,22 +4,19 @@
   padding: 20px;
   display: flex;
   color: white;
-  
   background-color: #272727;
 }
-body{
-  
+
+body {
   background-color: #121212;
 }
+
 .posts-container {
   flex: 2;
   justify-content: center;
   align-items: center;
 }
 
-.sidebar{
-  background-color: #fef8f8;
-}
 h1 {
   text-align: center;
   margin-bottom: 20px;
@@ -41,8 +38,8 @@ h1 {
 
 .post h3 {
   font-size: 18px;
-   color: white;
-   text-align: center;
+  color: white;
+  text-align: center;
 }
 
 .post p {
@@ -52,39 +49,44 @@ h1 {
 }
 
 .post img {
-  margin-left: 20px;
-  margin-right: 20px;
+  width: 100%;
   height: auto;
-  margin-bottom: 10px;
-  width: 500px;
+  margin: 10px 0;
 }
-.post button{
+
+.post button {
   margin-left: 20px;
   text-decoration: none;
   border: none;
   border-radius: 5px;
   margin-right: 10px;
   font-size: 15px;
-}
-.post button:hover{
-  background-color:#a7a7a7;
-  
+  padding: 6px 10px;
+  cursor: pointer;
 }
 
+.post button:hover {
+  background-color: #a7a7a7;
+}
+
+.like-button.liked {
+  background-color: red;
+  color: white;
+}
 
 .post-footer {
   margin-left: 20px;
   font-size: 14px;
   margin-top: 10px;
   color: #888;
+  cursor: pointer;
 }
 
 .comments-container {
   margin-top: 10px;
-  color: #666;
+  color: white;
 }
 
 .comments-container p {
   margin-left: 20px;
 }
-

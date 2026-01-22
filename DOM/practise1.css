@@ -17,3 +17,9 @@ Jab kisi element pe green class lagegi → wo green ho jaayega.*/
   background-color: blue;
   color: white;
 }
+
+#form{
+  display: block;
+  margin:auto;
+  padding: 50px;
+}
