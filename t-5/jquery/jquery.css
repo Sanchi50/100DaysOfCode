@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  font-family: serif;
+}
+
+/* Light Mode */
+body.light {
+  background-color: white;
+  color: black;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: black;
+  color: white;
+}
+
+/* Toggle Switch */
+.toggle-container {
+  width: 90px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: white;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+.toggle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: black;
+  transition: transform 0.3s ease;
+  margin-left: 5px;
+}
+
+/* When dark mode is active */
+body.dark .toggle-container {
+  background-color: black;
+  border-color: white;
+}
+
+body.dark .toggle {
+  background-color: white;
+  transform: translateX(45px);
+}
