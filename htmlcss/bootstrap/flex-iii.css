@@ -1,0 +1,83 @@
+body {
+    font-family: monospace;
+    background-color: #e2fffd;
+  }
+  
+  h1 {
+    text-transform: uppercase;
+    color: white;
+    background-color: darkslategrey;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  #box1,
+  #box2 {
+    width: 330px;
+    height: 240px;
+    background-color: #ffffff;
+    margin: 100px auto;
+    border: 1px solid black;
+    display: flex;
+  }
+  
+  #box1 div,
+  #box2 div {
+    border-radius: 50%;
+    border: 1px solid lightgrey;
+    box-sizing: border-box;
+  }
+  
+  .ball {
+    height: 30px;
+    width: 30px;
+    margin: 5px; /* Added margin to create space between balls */
+  }
+  
+  #ball1 {
+    background-color: #ff9bc9;
+  }
+  
+  #ball2 {
+    background-color: #df8eff;
+  }
+  
+  #ball3 {
+    background-color: #91dcff;
+  }
+  
+  #ball4 {
+    background-color: #93ff99;
+  }
+  
+  #ball5 {
+    background-color: #dfff89;
+  }
+  
+  #ball6 {
+    background-color: #ffdf8e;
+  }
+  
+  #ball7 {
+    background-color: #aaff9b; /* Added a new ball color */
+  }
+  
+  #ball8 {
+    background-color: #ffbaba; /* Added a new ball color */
+  }
+
+  #box1{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  #box2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-around;
+  }
