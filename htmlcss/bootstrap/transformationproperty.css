@@ -1,0 +1,28 @@
+body{
+    font-family:Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    background-color: #ff6347;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add transition properties here */
+    
+    transition-duration: 2s;
+    transition-delay: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+/* write code for changes occur over hovering the .box element below */
+.box:hover { width: 300px;
+    background-color:#4caf50;
+    transform: rotate(360deg) scale(1.2);
+}
