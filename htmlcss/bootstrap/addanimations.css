@@ -1,0 +1,72 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #222;
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 2;
+  /* Test Case: Center the circle */
+  transform: translate(-50%, -50%);
+}
+
+.wave {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #fff;
+  /* Test Case: Base Animation Properties */
+  transform: translate(-50%, -50%);
+  animation-name: wave;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Test Case: Wave 1 Specifics */
+.wave-1 {
+  animation-delay: 0s;
+}
+
+/* Test Case: Wave 2 Specifics */
+.wave-2 {
+  animation-delay: 1s;
+  animation-duration: 4s;
+}
+
+/* Test Case: Wave 3 Specifics */
+.wave-3 {
+  animation-delay: 2s;
+  animation-duration: 5s;
+}
+
+/* Test Case: Keyframes Definition */
+@keyframes wave {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(2.5);
+    opacity: 0;
+  }
+}
