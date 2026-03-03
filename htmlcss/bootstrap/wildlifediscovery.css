@@ -1,0 +1,91 @@
+body {
+  background-color: #222;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+header {
+  /* Updated to relative units */
+  height: 15vh; 
+  padding: 0.625rem;
+  background-color: #222;
+  color: #fff;
+  background-image: url("https://ninjasfiles.s3.amazonaws.com/asset_0000000000002828_1711271938_ken-cheung-KonWFWUaAuk-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(90%);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  /* Updated to relative units */
+  font-size: 1.125rem;
+  margin-left: 1.25rem;
+  margin-top: 0;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+  /* Updated to relative units */
+  margin-top: 3.125rem;
+  width: 80%;
+}
+
+.gallery-item {
+  text-align: center;
+  position: relative;
+  background-color: #f2f2f2;
+  /* Updated to relative units */
+  margin-bottom: 1.875rem;
+  width: 18.75rem;
+  height: 25rem;
+  border-radius: 6.25rem;
+  padding: 0;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Updated to relative units */
+  border-radius: 4.375rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 3.375rem 3.4375rem,
+    rgba(255, 255, 255, 0.12) 0px -0.75rem 1.875rem,
+    rgba(255, 255, 255, 0.12) 0px 0.25rem 0.375rem,
+    rgba(255, 255, 255, 0.12) 0px 0.75rem 0.8125rem,
+    rgba(255, 255, 255, 0.09) 0px -0.1875rem 0.3125rem;
+}
+
+.gallery-item h3 {
+  z-index: 2;
+  position: relative;
+  color: #fff;
+  /* Updated to relative units */
+  font-size: 1.375rem;
+  top: 22rem;
+}
