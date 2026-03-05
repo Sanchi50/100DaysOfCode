@@ -1,0 +1,103 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 400px;
+}
+
+/* Common properties for all boxes */
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 10px;
+  /* Test Case: Common animation properties */
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* Box 1: Slide and Bounce */
+.box-1 {
+  background: linear-gradient(to right, #ffc3a0, #ffafbd);
+  animation-name: slide-and-bounce;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+}
+
+/* Box 2: Rotate and Scale */
+.box-2 {
+  background: linear-gradient(to right, #a8ff78, #78ffd6);
+  animation-name: rotate-and-scale;
+  animation-delay: 1s;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+
+/* Box 3: Slide and Fade */
+.box-3 {
+  background: linear-gradient(to right, #f9d423, #ff4e50);
+  animation-name: slide-and-fade;
+  animation-delay: 2s;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+}
+
+/* --- KEYFRAMES --- */
+
+/* Corrected Keyframes for slide-and-bounce */
+@keyframes slide-and-bounce {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(300px);
+  }
+  75% {
+    /* Important: Must maintain translateX(300px) during the scale bounce */
+    transform: translateX(300px) scale(1.2);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Keyframes for rotate-and-scale */
+@keyframes rotate-and-scale {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* Keyframes for slide-and-fade */
+@keyframes slide-and-fade {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-300px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
